@@ -1,5 +1,6 @@
 package com.bobbytbh.ineedmoreqol;
 
+import com.bobbytbh.ineedmoreqol.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +23,8 @@ public class ineedmoreqol
     public ineedmoreqol()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
